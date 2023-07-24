@@ -35,7 +35,7 @@ class Product {
     }
 
     public function printCard() {
-        echo "<div class='card' style='width: 18rem;'>";
+        echo "<div class='card shadow-sm' style='width: 18rem;'>";
         echo "<img src='".$this->imageUrl."' class='card-img-top' alt='".$this->name."'>";
         echo "<div class='card-body'>";
         echo "<h5 class='card-title'>".$this->name."</h5>";

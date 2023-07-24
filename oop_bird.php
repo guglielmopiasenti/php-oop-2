@@ -2,10 +2,14 @@
 
 require_once 'oop_products.php';
 
-$bird = new Category("Bird");
+class Bird extends Product {
+    public function __construct($name, $price, $imageURL) {
+        $this->category = 'Bird';
+        $this->name = $name;
+        $this->price = $price;
+        $this->imageURL = $imageURL;
+    }
+}
 
-$birdProducts = array(
-    new Product("Voliera Wilma in Legno", "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg", $bird),
-);
 
 ?>

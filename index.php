@@ -1,13 +1,28 @@
 <?php
 
-require_once 'oop_dog.php';
-require_once 'oop_cat.php';
-require_once 'oop_bird.php';
-require_once 'oop_fish.php';
+require_once 'oop_category.php';
+require_once 'oop_products.php';
+
+// Creating instances of Category
+$dogCategory = new Category('Dog');
+$catCategory = new Category('Cat');
+$birdCategory = new Category('Bird');
+$fishCategory = new Category('Fish');
+
+// Creating instances of Product and assigning them to the respective categories
+$dogProduct1 = new Product('Royal Canin Mini Adult', 'https://arcaplanet.vtexassets.com/arquivos/ids/243820/royal-canin-size-cane-mini-adult.jpg', $dogCategory);
+$dogProduct2 = new Product('Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg', $dogCategory);
+
+$catProduct1 = new Product('Almo Nature Cat Daily Lattina', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', $catCategory);
+$catProduct2 = new Product('Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', $catCategory);
+
+$birdProduct = new Product('Voliera Wilma in Legno', 'https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg', $birdCategory);
+
+$fishProduct1 = new Product('Mangime per Pesci Guppy in Fiocchi', 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', $fishCategory);
+$fishProduct2 = new Product('Cartucce Filtranti per Filtro EasyCrystal', 'https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', $fishCategory);
 
 // Combine all products into a single array
-$allProducts = array_merge($dogProducts, $catProducts, $birdProducts, $fishProducts);
-
+$allProducts = array($dogProduct1, $dogProduct2, $catProduct1, $catProduct2, $birdProduct, $fishProduct1, $fishProduct2);
 
 ?>
 
